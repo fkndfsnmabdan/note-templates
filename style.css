@@ -1,0 +1,163 @@
+:root {
+  --bg: #f4f6f9;
+  --surface: #ffffff;
+  --text: #1f2933;
+  --muted: #5b6b7c;
+  --line: #dde3ea;
+  --accent: #2f6fde;
+  --accent-soft: #e8f0fd;
+  --code-bg: #eef2f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12161c;
+    --surface: #1a2029;
+    --text: #e6ebf0;
+    --muted: #9aa8b6;
+    --line: #2c3540;
+    --accent: #6ea0f5;
+    --accent-soft: #1f2d44;
+    --code-bg: #232b36;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.logo {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--accent);
+  display: grid;
+  place-items: center;
+}
+
+.logo svg {
+  width: 26px;
+  height: 26px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+h2 {
+  margin: 32px 0 10px;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 20px 0 6px;
+  font-size: 16px;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 12px;
+}
+
+li + li {
+  margin-top: 4px;
+}
+
+a {
+  color: var(--accent);
+}
+
+code {
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--code-bg);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.card {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.notice {
+  margin-bottom: 24px;
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.notice[hidden] {
+  display: none;
+}
+
+.notice p:last-child {
+  margin-bottom: 0;
+}
+
+.vars {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.vars td {
+  padding: 6px 8px;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.vars td:first-child {
+  width: 44%;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 36px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 14px;
+}
